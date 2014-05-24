@@ -42,8 +42,14 @@ class Strategy(object):
 
 class ConsoleStrategy(Strategy):
     """
-    Strategy for console output
+    Strategy for console output.
+    Implements the Singleton pattern.
     """
+    def __new__(cls):
+        if not hasattr(cls, '_inst'):
+            cls._inst = super(ConsoleStrategy, cls).__new__(cls)
+        return cls._inst
+
     def strg_prnt(self, outstr):
         """
         Outputs to standard out
