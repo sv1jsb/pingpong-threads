@@ -12,5 +12,23 @@ It's an example of using and synchronizing threads in java, as part of coursera'
 This python port uses Semaphores, RLocks and Conditions to synchronize threads. Also an implementation of java's CountDownLatch is used to enforce a barrier synchronization of the two threads.
 
 #### Pattterns
-As the original project, the python port uses the Template pattern to instantiate concrete ping and pong threads, and the Strategy pattern to provide environment specific output and control.
+As the original project, the python port uses the Template pattern to instantiate concrete ping and pong threads, and the Strategy pattern to provide environment specific output and control. The Singleton pattern is used for providing only one object for a Strategy class.
+
+
+### Use
+
+All code is in pingpong directory. The program is designed so it can be run by command prompt or be imported as a module.
+In both uses, if no arguments are given it will run with the default values.
+
+Run:
+
+    python pp.py -h
+
+at the toplevel directory of this repository for help on command arguments. The same ones are expected when imported as a module.
+
+### Have fun
+Clone and experiment. After all this is an educational project. 
+
+
+
 
