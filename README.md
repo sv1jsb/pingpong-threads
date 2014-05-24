@@ -24,7 +24,7 @@ Run:
 
     python pp.py -h
 
-at the toplevel directory of this repository for help on command arguments. The same ones are expected when imported as a module.
+at the toplevel directory of this repository for help on command arguments.
 
 ### Have fun
 Clone and experiment. After all this is an educational project. 
