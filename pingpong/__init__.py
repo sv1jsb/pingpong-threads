@@ -16,7 +16,7 @@ class PingPong(object):
     Creates two threads to play ping pong.
     """
 
-    def __init__(self, **kwargs):
+    def __init__(self, strg='CON', sync='SEMA', iters=10, turns=5):
         """
         Named parameters:
         strg:   the strategy to use, defaults to console
@@ -24,22 +24,6 @@ class PingPong(object):
         iters:  number of iterations to perform
         turns:  number of turns when synching mechanism is conditions
         """
-        if kwargs.get('strg', None):
-            strg = kwargs['strg']
-        else:
-            strg = 'CON'
-        if kwargs.get('sync', None):
-            sync = kwargs['sync']
-        else:
-            sync = 'SEMA'
-        if kwargs.get('iters', None):
-            iters = kwargs['iters']
-        else:
-            iters = 10
-        if kwargs.get('turns', None):
-            turns = kwargs['turns']
-        else:
-            turns = 5
         if strg == 'CON':
             self.strategy = ConsoleStrategy()
         else:
